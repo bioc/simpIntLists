@@ -1,0 +1,792 @@
+\documentclass[a4paper]{book}
+\usepackage[times,hyper]{Rd}
+\usepackage{makeidx}
+\makeindex{}
+\begin{document}
+\chapter*{}
+\begin{center}
+{\textbf{\huge simpIntLists Package}}
+\par\bigskip{\large \today}
+\end{center}
+\Rdcontents{\R{} topics documented:}
+\HeaderA{simpIntLists-package}{The package contains BioGRID interactions for various organisms in a simple format}{simpIntLists.Rdash.package}
+\aliasA{simpIntLists}{simpIntLists-package}{simpIntLists}
+\keyword{package}{simpIntLists-package}
+%\VignetteIndexEntry{simpIntLists} 
+\begin{Description}\relax
+The package contains BioGRID interactions for arabidopsis(thale cress), c.elegans, fruit fly, human, 
+mouse, yeast( budding yeast ) and S.pombe (fission yeast) .
+Entrez ids, official names and unique ids can be used to find proteins.
+\end{Description}
+\begin{Details}\relax
+\Tabular{ll}{
+Package: & simpIntLists\\
+Type: & Package\\
+Version: & 1.0\\
+Date: & 2011-01-18\\
+License: & GPL version 2 or newer\\
+LazyLoad: & yes\\
+}
+\end{Details}
+\begin{Author}\relax
+Kircicegi KORKMAZ, Volkan ATALAY, Rengul CETIN ATALAY
+Maintainer: Kircicegi KORKMAZ \textless{}e102771@ceng.metu.edu.tr\textgreater{}
+\end{Author}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, 
+Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex1>>=
+ library(simpIntLists)
+ i<-findInteractionList("arabidopsis", "EntrezId")
+ i[1:5]
+ data(ArabidopsisBioGRIDInteractionUniqueId)
+ ArabidopsisBioGRIDInteractionUniqueId[30:32]
+@
+\end{Examples}
+
+\HeaderA{ArabidopsisBioGRIDInteractionEntrezId}{BioGRID interactions for thale cress (Arabidopsis thaliana), entrez ids are used as identifiers}{ArabidopsisBioGRIDInteractionEntrezId}
+\keyword{datasets}{ArabidopsisBioGRIDInteractionEntrezId}
+\begin{Description}\relax
+This data set contains a list of interactions for  thale cress (Arabidopsis thaliana).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, Entrez ids are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(ArabidopsisBioGRIDInteractionEntrezId)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+List of 2118
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+\$ :List of 2
+..\$ name       : int 828230
+..\$ interactors: int [1:12] 832208 821860 821860 832208 832208 821860 832208 5888 842783 834532 ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex2>>=
+data(ArabidopsisBioGRIDInteractionEntrezId)
+ArabidopsisBioGRIDInteractionEntrezId[1:5]
+@
+\end{Examples}
+
+\HeaderA{ArabidopsisBioGRIDInteractionOfficial}{BioGRID interactions for thale cress (Arabidopsis thaliana), official names are used as identifiers}{ArabidopsisBioGRIDInteractionOfficial}
+\keyword{datasets}{ArabidopsisBioGRIDInteractionOfficial}
+\begin{Description}\relax
+This data set contains a list of interactions for  thale cress (Arabidopsis thaliana).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, official names are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(ArabidopsisBioGRIDInteractionOfficial)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+List of 2109
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+\$ :List of 2
+..\$ name       : chr "BRCA2(IV)"
+..\$ interactors: chr [1:12] "ATRAD51" "DMC1" "DMC1" "ATRAD51" ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex3>>=
+data(ArabidopsisBioGRIDInteractionOfficial)
+ArabidopsisBioGRIDInteractionOfficial[1:5]
+@
+\end{Examples}
+
+\HeaderA{ArabidopsisBioGRIDInteractionUniqueId}{BioGRID interactions for thale cress (Arabidopsis thaliana), unique ids are used as identifiers}{ArabidopsisBioGRIDInteractionUniqueId}
+\keyword{datasets}{ArabidopsisBioGRIDInteractionUniqueId}
+\begin{Description}\relax
+This data set contains a list of interactions for  thale cress (Arabidopsis thaliana).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, unique ids (systematic names) are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(ArabidopsisBioGRIDInteractionUniqueId)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+List of 2106
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+\$ :List of 2
+..\$ name       : chr "At4g00020"
+..\$ interactors: chr [1:12] "At5g20850" "At3g22880" "At3g22880" "At5g20850" ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex4>>=
+data(ArabidopsisBioGRIDInteractionUniqueId)
+ArabidopsisBioGRIDInteractionUniqueId[1:5]
+@
+\end{Examples}
+
+\HeaderA{C.ElegansBioGRIDInteractionEntrezId}{BioGRID interactions for C.elegans (Caenorhabditis elegans), entrez ids are used as identifiers}{C.ElegansBioGRIDInteractionEntrezId}
+\keyword{datasets}{C.ElegansBioGRIDInteractionEntrezId}
+\begin{Description}\relax
+This data set contains a list of interactions for  C.elegans (Caenorhabditis elegans).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, Entrez ids are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(C.ElegansBioGRIDInteractionEntrezId)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+List of 3573
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+\$ :List of 2
+..\$ name       : int 177286
+..\$ interactors: int [1:4] 179791 178104 180982 178104
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex5>>=
+data(C.ElegansBioGRIDInteractionEntrezId)
+C.ElegansBioGRIDInteractionEntrezId[1:5]
+@
+\end{Examples}
+
+\HeaderA{C.ElegansBioGRIDInteractionOfficial}{BioGRID interactions for C.elegans (Caenorhabditis elegans), official names are used as identifiers}{C.ElegansBioGRIDInteractionOfficial}
+\keyword{datasets}{C.ElegansBioGRIDInteractionOfficial}
+\begin{Description}\relax
+This data set contains a list of interactions for  C.elegans (Caenorhabditis elegans).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, official names are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(C.ElegansBioGRIDInteractionOfficial)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+List of 3557
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+\$ :List of 2
+..\$ name       : chr "soc-2"
+..\$ interactors: chr [1:4] "W07G4.5" "let-60" "bar-1" "let-60"
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex6>>=
+data(C.ElegansBioGRIDInteractionOfficial)
+C.ElegansBioGRIDInteractionOfficial[1:5]
+@
+\end{Examples}
+
+\HeaderA{C.ElegansBioGRIDInteractionUniqueId}{BioGRID interactions for C.elegans (Caenorhabditis elegans), unique ids are used as identifiers}{C.ElegansBioGRIDInteractionUniqueId}
+\keyword{datasets}{C.ElegansBioGRIDInteractionUniqueId}
+\begin{Description}\relax
+This data set contains a list of interactions for  C.elegans (Caenorhabditis elegans).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, unique ids(systematic names) are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(C.ElegansBioGRIDInteractionUniqueId)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+List of 3571
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+\$ :List of 2
+..\$ name       : chr "AC7.2"
+..\$ interactors: chr [1:4] "W07G4.5" "ZK792.6" "C54D1.6" "ZK792.6"
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex7>>=
+data(C.ElegansBioGRIDInteractionUniqueId)
+C.ElegansBioGRIDInteractionUniqueId[1:5]
+@
+\end{Examples}
+
+\HeaderA{findInteractionList}{Find BioGRID interaction list for a given organism an identifier type}{findInteractionList}
+\keyword{file}{findInteractionList}
+\begin{Description}\relax
+Find BioGRID interaction list for a given organism an identifier type
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+findInteractionList(organism, idType)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{organism}] Organism name. Can be one of 'arabidopsis', 'c.elegans', 'fruitFly', 'human', 'mouse', 'yeast', 's.pombe'. 
+
+\item[\code{idType}] Type of identifier used. Can be one of 'EntrezId', 'Official' and 'UniqueId'
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+List containing the interactions. For each gene/protein, there is an entry in the list with "name" containing name of the gen/protein and "interactors" containing the list of genes/proteins interacting with it.
+\end{Value}
+\begin{Examples}
+<<ex8>>=
+ l <- findInteractionList("arabidopsis", "EntrezId")
+ l[1:5]
+@
+\end{Examples}
+
+\HeaderA{FruitFlyBioGRIDInteractionEntrezId}{BioGRID interactions for Fruit fly (Drosophila melanogaster), entrez ids are used as identifiers}{FruitFlyBioGRIDInteractionEntrezId}
+\keyword{datasets}{FruitFlyBioGRIDInteractionEntrezId}
+\begin{Description}\relax
+This data set contains a list of interactions for Fruit fly (Drosophila melanogaster)
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, Entrez ids are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(FruitFlyBioGRIDInteractionEntrezId)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+List of 7578
+\$ :List of 2
+..\$ name       : int 43383
+..\$ interactors: int [1:18] 37006 40877 46391 32132 43584 3355072 39452 40887 40889 47186 ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex9>>=
+data(FruitFlyBioGRIDInteractionEntrezId)
+FruitFlyBioGRIDInteractionEntrezId[1:5]
+@
+\end{Examples}
+
+\HeaderA{FruitFlyBioGRIDInteractionOfficial}{BioGRID interactions for Fruit fly (Drosophila melanogaster), official names are used as identifiers}{FruitFlyBioGRIDInteractionOfficial}
+\keyword{datasets}{FruitFlyBioGRIDInteractionOfficial}
+\begin{Description}\relax
+This data set contains a list of interactions for Fruit fly (Drosophila melanogaster)
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, official names are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(FruitFlyBioGRIDInteractionOfficial)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+List of 7577
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+\$ :List of 2
+..\$ name       : chr "fkh"
+..\$ interactors: chr [1:18] "CG6459" "CG10032" "CG11899" "CkIIbeta" ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex10>>=
+data(FruitFlyBioGRIDInteractionOfficial)
+FruitFlyBioGRIDInteractionOfficial[1:5]
+@
+\end{Examples}
+
+\HeaderA{FruitFlyBioGRIDInteractionUniqueId}{BioGRID interactions for Fruit fly (Drosophila melanogaster), unique ids (systematic names) are used as identifiers}{FruitFlyBioGRIDInteractionUniqueId}
+\keyword{datasets}{FruitFlyBioGRIDInteractionUniqueId}
+\begin{Description}\relax
+This data set contains a list of interactions for Fruit fly (Drosophila melanogaster)
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, unique ids (systematic names)  are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(FruitFlyBioGRIDInteractionUniqueId)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+List of 7563
+\$ :List of 2
+..\$ name       : chr "Dmel\_CG10002"
+..\$ interactors: chr [1:18] "Dmel\_CG6459" "Dmel\_CG10032" "Dmel\_CG11899" "Dmel\_CG15224" ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex11>>=
+data(FruitFlyBioGRIDInteractionUniqueId)
+FruitFlyBioGRIDInteractionUniqueId[1:5]
+@
+\end{Examples}
+
+\HeaderA{HumanBioGRIDInteractionEntrezId}{BioGRID interactions for human (Homo sapiens), entrez ids are used as identifiers}{HumanBioGRIDInteractionEntrezId}
+\keyword{datasets}{HumanBioGRIDInteractionEntrezId}
+\begin{Description}\relax
+This data set contains a list of interactions for human (Homo sapiens).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, Entrez ids are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(HumanBioGRIDInteractionEntrezId)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+List of 10213
+\$ :List of 2
+..\$ name       : int 6416
+..\$ interactors: int [1:25] 2318 192176 2318 2318 9043 5599 5871 5609 1326 207 ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex12>>=
+data(HumanBioGRIDInteractionEntrezId)
+HumanBioGRIDInteractionEntrezId[1]
+@
+\end{Examples}
+
+\HeaderA{HumanBioGRIDInteractionOfficial}{BioGRID interactions for human (Homo sapiens), official names are used as identifiers}{HumanBioGRIDInteractionOfficial}
+\keyword{datasets}{HumanBioGRIDInteractionOfficial}
+\begin{Description}\relax
+This data set contains a list of interactions for human (Homo sapiens).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, official names ids are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(HumanBioGRIDInteractionOfficial)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+List of 10098
+\$ :List of 2
+..\$ name       : chr "MAP2K4"
+..\$ interactors: chr [1:25] "FLNC" "Flna" "FLNC" "FLNC" ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex13>>=
+data(HumanBioGRIDInteractionOfficial)
+HumanBioGRIDInteractionOfficial[1]
+@
+\end{Examples}
+
+\HeaderA{HumanBioGRIDInteractionUniqueId}{BioGRID interactions for human (Homo sapiens), unique ids (systematic names) are used as identifiers}{HumanBioGRIDInteractionUniqueId}
+\keyword{datasets}{HumanBioGRIDInteractionUniqueId}
+\begin{Description}\relax
+This data set contains a list of interactions for human (Homo sapiens).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, unique ids (systematic names) are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(HumanBioGRIDInteractionUniqueId)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+List of 2785
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+\$ :List of 2
+..\$ name       : chr "-"
+..\$ interactors: chr "-"
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex14>>=
+data(HumanBioGRIDInteractionUniqueId)
+HumanBioGRIDInteractionUniqueId[1]
+@
+\end{Examples}
+
+\HeaderA{MouseBioGRIDInteractionEntrezId}{BioGRID interactions for Mouse (Mus musculus), entrez ids are used as identifiers}{MouseBioGRIDInteractionEntrezId}
+\keyword{datasets}{MouseBioGRIDInteractionEntrezId}
+\begin{Description}\relax
+This data set contains a list of interactions for Mouse (Mus musculus).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, Entrez ids are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(MouseBioGRIDInteractionEntrezId)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+List of 2361
+\$ :List of 2
+..\$ name       : int 4087
+..\$ interactors: int [1:28] 75141 19376 69159 72433 69288 54126 78294 57443 18412 52432 ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex15>>=
+data(MouseBioGRIDInteractionEntrezId)
+MouseBioGRIDInteractionEntrezId[1:5]
+@
+\end{Examples}
+
+\HeaderA{MouseBioGRIDInteractionOfficial}{BioGRID interactions for Mouse (Mus musculus), official names ids are used as identifiers}{MouseBioGRIDInteractionOfficial}
+\keyword{datasets}{MouseBioGRIDInteractionOfficial}
+\begin{Description}\relax
+This data set contains a list of interactions for Mouse (Mus musculus).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, official names are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(MouseBioGRIDInteractionOfficial)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+List of 2354
+\$ :List of 2
+..\$ name       : chr "SMAD2"
+..\$ interactors: chr [1:28] "Rasd2" "Rab34" "Rhebl1" "Rab38" ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex16>>=
+data(MouseBioGRIDInteractionOfficial)
+MouseBioGRIDInteractionOfficial[1:5]
+@
+\end{Examples}
+
+\HeaderA{MouseBioGRIDInteractionUniqueId}{BioGRID interactions for Mouse (Mus musculus), unique ids (systematic names) are used as identifiers}{MouseBioGRIDInteractionUniqueId}
+\keyword{datasets}{MouseBioGRIDInteractionUniqueId}
+\begin{Description}\relax
+This data set contains a list of interactions for Mouse (Mus musculus).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, Entrez ids are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(MouseBioGRIDInteractionUniqueId)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+
+List of 648
+\$ :List of 2
+..\$ name       : chr "-"
+..\$ interactors: chr "-"
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex17>>=
+data(MouseBioGRIDInteractionUniqueId)
+MouseBioGRIDInteractionUniqueId[1:5]
+@
+\end{Examples}
+
+\HeaderA{S.PombeBioGRIDInteractionEntrezId}{BioGRID interactions for fission yeast (Schizosaccharomyces pombe), entrez ids are used as identifiers}{S.PombeBioGRIDInteractionEntrezId}
+\keyword{datasets}{S.PombeBioGRIDInteractionEntrezId}
+\begin{Description}\relax
+This data set contains a list of interactions for fission yeast (Schizosaccharomyces pombe).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, Entrez ids are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(S.PombeBioGRIDInteractionEntrezId)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+List of 2110
+\$ :List of 2
+..\$ name       : int 2539495
+..\$ interactors: int [1:10] 2541652 2542008 2539252 2541055 2542677 2543539 2541652 2540024 2539649 2542008
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex18>>=
+data(S.PombeBioGRIDInteractionEntrezId)
+S.PombeBioGRIDInteractionEntrezId[1:5]
+@
+\end{Examples}
+
+\HeaderA{S.PombeBioGRIDInteractionOfficial}{BioGRID interactions for fission yeast (Schizosaccharomyces pombe), official names are used as identifiers}{S.PombeBioGRIDInteractionOfficial}
+\keyword{datasets}{S.PombeBioGRIDInteractionOfficial}
+\begin{Description}\relax
+This data set contains a list of interactions for fission yeast (Schizosaccharomyces pombe).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, official names are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(S.PombeBioGRIDInteractionOfficial)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+List of 2110
+\$ :List of 2
+..\$ name       : chr "ptc1"
+..\$ interactors: chr [1:10] "sty1" "ptc3" "ptc2" "wis1" ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex19>>=
+data(S.PombeBioGRIDInteractionOfficial)
+S.PombeBioGRIDInteractionOfficial[1:5]
+@
+\end{Examples}
+
+\HeaderA{S.PombeBioGRIDInteractionUniqueId}{BioGRID interactions for fission yeast (Schizosaccharomyces pombe), unique ids (systematic names) are used as identifiers}{S.PombeBioGRIDInteractionUniqueId}
+\keyword{datasets}{S.PombeBioGRIDInteractionUniqueId}
+\begin{Description}\relax
+This data set contains a list of interactions for fission yeast (Schizosaccharomyces pombe).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, unique ids (systematic names) are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(S.PombeBioGRIDInteractionUniqueId)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+List of 2097
+\$ :List of 2
+..\$ name       : chr "SPCC4F11.02"
+..\$ interactors: chr [1:10] "SPAC24B11.06c" "SPAC2G11.07c" "SPCC1223.11" "SPBC409.07c" ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex20>>=
+data(S.PombeBioGRIDInteractionUniqueId)
+S.PombeBioGRIDInteractionUniqueId[1:5]
+@
+\end{Examples}
+
+\HeaderA{YeastBioGRIDInteractionEntrezId}{BioGRID interactions for budding yeast (Saccharomyces cerevisiae), entrez ids are used as identifiers}{YeastBioGRIDInteractionEntrezId}
+\keyword{datasets}{YeastBioGRIDInteractionEntrezId}
+\begin{Description}\relax
+This data set contains a list of interactions for budding yeast (Saccharomyces cerevisiae).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, Entrez ids are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(YeastBioGRIDInteractionEntrezId)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+List of 6049
+\$ :List of 2
+..\$ name       : int 850504
+..\$ interactors: int [1:887] 852545 853814 856220 853086 850749 853986 856848 851407 856518 854317 ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex21>>=
+data(YeastBioGRIDInteractionEntrezId)
+YeastBioGRIDInteractionEntrezId[1:5]
+@
+\end{Examples}
+
+\HeaderA{YeastBioGRIDInteractionOfficial}{BioGRID interactions for budding yeast (Saccharomyces cerevisiae), official names are used as identifiers}{YeastBioGRIDInteractionOfficial}
+\keyword{datasets}{YeastBioGRIDInteractionOfficial}
+\begin{Description}\relax
+This data set contains a list of interactions for budding yeast (Saccharomyces cerevisiae).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, Entrez ids are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(YeastBioGRIDInteractionOfficial)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+List of 6032
+\$ :List of 2
+..\$ name       : chr "ACT1"
+..\$ interactors: chr [1:887] "ALG7" "ASK1" "COG4" "ERG1" ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex22>>=
+data(YeastBioGRIDInteractionOfficial)
+YeastBioGRIDInteractionOfficial[1:5]
+@
+\end{Examples}
+
+\HeaderA{YeastBioGRIDInteractionUniqueId}{BioGRID interactions for budding yeast (Saccharomyces cerevisiae), unique ids (systematic names) are used as identifiers}{YeastBioGRIDInteractionUniqueId}
+\keyword{datasets}{YeastBioGRIDInteractionUniqueId}
+\begin{Description}\relax
+This data set contains a list of interactions for budding yeast (Saccharomyces cerevisiae).
+The interactions are taken from BioGRID version 3.1.72, January 2011 release. 
+For gene/protein entries, unique ids (systematic names) are used.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}data(YeastBioGRIDInteractionUniqueId)\end{verbatim}
+\end{Usage}
+\begin{Format}\relax
+The format is:
+A list containing the interactions. For each gene/protein, there is an entry in the list with "name" 
+containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+interacting with it.
+example:
+List of 5931
+\$ :List of 2
+..\$ name       : chr "YFL039C"
+..\$ interactors: chr [1:887] "YBR243C" "YKL052C" "YPR105C" "YGR175C" ...
+\end{Format}
+\begin{Source}\relax
+http://thebiogrid.org/download.php
+\end{Source}
+\begin{References}\relax
+Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz A, Tyers M. \emph{Biogrid: A General Repository for Interaction Datasets.} Nucleic Acids Res. Jan1; 34:D535-9
+\end{References}
+\begin{Examples}
+<<ex23>>=
+data(YeastBioGRIDInteractionUniqueId)
+YeastBioGRIDInteractionUniqueId[1:5]
+@
+\end{Examples}
+
+\printindex{}
+\end{document}

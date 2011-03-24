@@ -1,0 +1,17 @@
+Package: simpIntLists
+Type: Package
+Title: The package contains BioGRID interactions for various organisms in a simple format
+Version: 0.99.0
+Date: 2011-03-05
+Author: Kircicegi Korkmaz, Volkan Atalay, Rengul Cetin-Atalay
+Maintainer: Kircicegi Korkmaz <e102771@ceng.metu.edu.tr>
+Description: The package contains BioGRID interactions for arabidopsis(thale cress), 
+ c.elegans, fruit fly, human, mouse, yeast( budding yeast ) and S.pombe (fission yeast) . 
+ Entrez ids, official names and unique ids can be used to find proteins. The format of 
+ interactions are lists. For each gene/protein, there is an entry in the list with "name" 
+ containing name of the gene/protein and "interactors" containing the list of genes/proteins 
+ interacting with it.
+License: GPL (>= 2)
+LazyLoad: yes
+biocViews: ExperimentData
+
