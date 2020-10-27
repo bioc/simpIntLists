@@ -1,7 +1,7 @@
 Package: simpIntLists
 Type: Package
 Title: The package contains BioGRID interactions for various organisms in a simple format
-Version: 1.26.0
+Version: 1.27.0
 Date: 2011-03-05
 Author: Kircicegi Korkmaz, Volkan Atalay, Rengul Cetin-Atalay
 Maintainer: Kircicegi Korkmaz <e102771@ceng.metu.edu.tr>
